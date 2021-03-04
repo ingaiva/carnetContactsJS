@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Atelier "Carnet de contacts"</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  </head>
+  <body>
+      <h4 class="text-center">Carnet de contacts</h4>      
+
+      <form class="mx-auto w-75 py-2 px-3 border rounded bg-dark bg-gradient text-white">
+        <div class="">
+          <h6 class="mb-1">Nouveau contact</h6>
+          
+          <div class="mb-1 row">
+              <div class="col-sm-12 col-md-6">
+                  <label for="nameNew" class="form-label col-form-label-sm mb-0">Nom</label>
+                  <input type="text" class="form-control form-control-sm" id="nameNew"  placeholder="Nom">
+              </div>
+              <div class="col-sm-12 col-md-6">
+                   <label for="lastNameNew" class="form-label col-form-label-sm mb-0">Prénom</label>
+                  <input type="text" class="form-control form-control-sm" id="lastNameNew" placeholder="Prénom">
+              </div>
+          </div>
+          <div class="mb-2 row">
+              <div class="col-sm-12 col-md-6">
+                  <label for="mailNew" class="form-label col-form-label-sm mb-0">E-mail</label>
+                  <input type="email" class="form-control form-control-sm" id="mailNew" >
+              </div>
+              <div class="col-sm-12 col-md-6">
+                   <label for="telNew" class="form-label col-form-label-sm mb-0">N° téléphone</label>
+                  <input type="text" class="form-control form-control-sm" id="telNew" >
+              </div>
+          </div>
+          <div class="mb-1 row">
+            <div class="col-sm-12 col-md-6">
+              <div class="py-1 px-2 border rounded" id="typeContact">
+              
+                <div class="form-check form-check-inline border rounded px-2">
+                  <input class="form-check-input" type="radio" name="rdTypeContact" id="rdTypeContactPro" value="pro">
+                  <label class="form-check-label" for="rdTypeContactPro">
+                    Professionnel
+                  </label>
+                  <input class="form-check-input ml-3" type="radio" name="rdTypeContact" id="rdTypeContactPerso" value="perso">
+                  <label class="form-check-label" for="rdTypeContactPerso">
+                    Personnel
+                  </label>
+                </div>
+                <div class="">
+                  <div class="" id="divFb">
+                    <i class="fab fa-facebook mr-2"></i>
+                    <label for="fb" class="form-label col-form-label-sm mb-1">Facebook</label>
+                    <input type="text" class="form-control form-control-sm" id="fb">
+                  </div>
+                  <div class="" id="divLdn">
+                    <i class="fab fa-linkedin  mr-2"></i>
+                    <label for="ldn" class="form-label col-form-label-sm mb-1">LinekedIn</label>
+                    <input type="text" class="form-control form-control-sm" id="ldn">
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <div class="col-sm-12 col-md-6 mt-sm-2">
+              <button type="button" class="btn btn-sm btn-success px-3" id="btnSave">Ajouter</button>
+            </div>
+          </div>       
+          
+        </div>
+    </form>
+
+    <div id="divLstContacts" class="text-center m-3">
+        <h5>Vos contacts</h5>       
+        <h6 id="contactNone" class="text-center">Aucun contact n'existe encore.</h6>
+        <table class="table" id="lstContacts">
+            <thead>
+              <tr>
+                <th scope="col"  class="table-dark py-1"></th>
+                <th scope="col" class="table-dark  py-1">Type</th>
+                <th scope="col" class="table-dark  py-1">Nom</th>
+                <th scope="col" class="table-dark  py-1">Prénom</th>
+                <th scope="col" class="table-dark  py-1">Mail</th>
+                <th scope="col" class="table-dark  py-1">Communication</th>
+                <th scope="col" class="table-dark  py-1">Téléphone</th>
+                <th scope="col" class="table-dark  py-1">...</th>
+              </tr>
+            </thead>
+            <tbody>
+             
+            </tbody>
+          </table>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script src="scriptContactBase.js"></script>
+    <script src="scriptContactPerso.js"></script>
+    <script src="scriptContactPro.js"></script>
+    <script src="scriptAvecClasses.js"></script>
+</body>
+</html>
